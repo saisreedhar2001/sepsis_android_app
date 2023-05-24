@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".Home">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#3a3a3a"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:text="Sepsis Prediction"
+            android:textColor="#fff"
+            android:textSize="20dp">
+
+
+        </TextView>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <!-- Placeholder view to occupy space -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp" />
+
+            <ImageView
+                android:id="@+id/dev"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:src="@drawable/dev2" />
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#E7e4e5"
+            android:orientation="vertical"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.smarteist.autoimageslider.SliderView
+                    android:id="@+id/imageSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_margin="20dp"
+                    app:sliderAnimationDuration="600"
+                    app:sliderAutoCycleDirection="back_and_forth"
+                    app:sliderAutoCycleEnabled="true"
+                    app:sliderIndicatorAnimationDuration="600"
+                    app:sliderIndicatorGravity="center_horizontal|bottom"
+                    app:sliderIndicatorMargin="15dp"
+                    app:sliderIndicatorOrientation="horizontal"
+                    app:sliderIndicatorPadding="3dp"
+                    app:sliderIndicatorRadius="2dp"
+                    app:sliderIndicatorSelectedColor="#5A5A5A"
+                    app:sliderIndicatorUnselectedColor="#FFF"
+                    app:sliderScrollTimeInSec="1"
+                    app:sliderStartAutoCycle="true" />
+                <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                    android:id="@+id/youtube_player_view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:text="Inputs Needed for Sepsis Prediction"/>
+
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+
+                    android:gravity="center">
+
+                    <!-- Table Rows -->
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border2"
+                        >
+
+                        <TextView
+                            android:text="HR"
+                            android:padding="5dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.25"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            />
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/border" />
+
+                        <TextView
+                            android:text="Heart rate (beats per minute)"
+                            android:padding="5dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.5"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            />
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border2"
+                        >
+
+                        <TextView
+                            android:text="O2Sat"
+                            android:padding="5dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.25"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            />
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/border" />
+
+                        <TextView
+                            android:text="Pulse oximetry (%)"
+                            android:padding="5dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.5"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            />
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border2"
+                        >
+
+                        <TextView
+                            android:text="HR"
+                            android:padding="5dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.25"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            />
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/border" />
+
+                        <TextView
+                            android:text="Heart rate (beats per minute)"
+                            android:padding="5dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.5"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            />
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border2"
+                        >
+
+                        <TextView
+                            android:text="SBP"
+                            android:padding="5dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.25"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            />
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/border" />
+
+                        <TextView
+                            android:text="Systolic BP (mm Hg)"
+                            android:padding="5dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.5"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            />
+
+                    </TableRow>
+                    <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border2"
+                    >
+
+                    <TextView
+                        android:text="MAP"
+                        android:padding="5dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.25"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        />
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/border" />
+
+                    <TextView
+                        android:text="Mean arterial pressure (mm Hg)"
+                        android:padding="5dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        />
+
+                </TableRow>
+                    <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border2"
+                    >
+
+                    <TextView
+                        android:text="DBP"
+                        android:padding="5dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.25"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        />
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/border" />
+
+                    <TextView
+                        android:text="Diastolic BP (mm Hg)"
+                        android:padding="5dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        />
+
+                </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border2"
+                        >
+
+                        <TextView
+                            android:text="Resp"
+                            android:padding="5dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.25"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            />
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/border" />
+
+                        <TextView
+                            android:text="Respiration rate (breaths per minute)"
+                            android:padding="5dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.5"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            />
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border2"
+                        >
+
+                        <TextView
+                            android:text="Age"
+                            android:padding="5dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.25"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            />
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/border" />
+
+                        <TextView
+                            android:text="Years (100 for patients 90 or above)"
+                            android:padding="5dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.5"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            />
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border2"
+                        >
+
+                        <TextView
+                            android:text="HospAdmTime"
+                            android:padding="5dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.25"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            />
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/border" />
+
+                        <TextView
+                            android:text="Hours between hospital admit and ICU admit"
+                            android:padding="5dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.5"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            />
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border2"
+                        >
+
+                        <TextView
+                            android:text="ICULOS"
+                            android:padding="5dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.25"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            />
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/border" />
+
+                        <TextView
+                            android:text="ICU length-of-stay (hours since ICU admit)"
+                            android:padding="5dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.5"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            />
+
+                    </TableRow>
+
+
+                </TableLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="Outcome generated by model"/>
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginBottom="80dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+
+                    android:gravity="center">
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border2"
+                        >
+
+                        <TextView
+                            android:text="SepsisLabel"
+                            android:padding="5dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.25"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            />
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/border" />
+
+                        <TextView
+                            android:text="• For sepsis patients, SepsisLabel is 1.\n• For non-sepsis patients, SepsisLabel is 0.\n"
+                            android:padding="5dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.5"
+                            android:layout_height="match_parent"
+
+                            />
+
+                    </TableRow>
+
+                </TableLayout>
+
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/add_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+
+        android:layout_marginBottom="26dp"
+        android:backgroundTint="#Eb82a3"
+        android:text="Predict"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:icon="@drawable/machine_learning"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

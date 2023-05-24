@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- First color stripe -->
+    <item android:gravity="start">
+        <shape android:shape="rectangle">
+            <solid android:color="#FF3366" /> <!-- First color -->
+        </shape>
+    </item>
+
+    <!-- Second color stripe -->
+    <item android:gravity="start" android:left="100dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#33FF99" /> <!-- Second color -->
+        </shape>
+    </item>
+
+    <!-- Third color stripe -->
+    <item android:gravity="start" android:left="20dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFF00" /> <!-- Third color -->
+        </shape>
+    </item>
+
+    <!-- Add more color stripes as needed -->
+
+</layer-list>
